@@ -1,2 +1,2 @@
 # Tessera
-Tessera App (Frontend)
+Tessera App
