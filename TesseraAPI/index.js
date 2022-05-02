@@ -1,8 +1,14 @@
 const express = require('express')
 const app = express()
 
-const PORT = 3000
+app.use(express.static(__dirname + '/public'));
 
-app.listen(process.env.port || PORT, () => {
-    console.log(`Server running at ${PORT} !`);
+app.use(bodyParser.json());
+
+const routes = require('D:/Tessera/TesseraAPI/Routes/routes.js');
+app.use('/api', routes);
+
+
+app.listen(process.env.port || 4444, () => {
+    console.log(`Server running at ${4444} !`);
 })
