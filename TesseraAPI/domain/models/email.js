@@ -1,9 +1,10 @@
-const moongose = require('mongoose');
+const mongoose = require('../../infrastructure/db/connection');
 
-const Register = moongose.model('Tessera', {
+const emailSchema = new mongoose.Schema({
     name: String,
     email: String,
-    recoveryEmail: String,
 })
 
-module.exports = Register
+const emailModel = mongoose.model('Email', emailSchema)
+
+module.exports = emailModel

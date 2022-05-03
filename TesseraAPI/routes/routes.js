@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-const service = require('../Controller/registerController.js')
+const controller = require('../controllers/controller')
 
-router.post('/register', service.create);
+router.get('/emails', controller.findAll);
 
-router.get('/registers/details', service.details);
+router.post('/emails/new', controller.create);
+
+router.get('/emails/:id', controller.findById);
+
 
 module.exports = router;

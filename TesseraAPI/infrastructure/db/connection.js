@@ -1,6 +1,3 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
 const mongoose = require('mongoose');
 
 const DB_URL = 'mongodb+srv://Willian:root@cluster0.bruyr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
