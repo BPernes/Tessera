@@ -1,8 +1,13 @@
 const express = require('express')
+const bodyParser = require('body-parser');
 const app = express()
 
-const PORT = 3000
+app.use(bodyParser.json());
 
-app.listen(process.env.port || PORT, () => {
-    console.log(`Server running at ${PORT} !`);
+const router = require('./routes/routes');
+app.use('/api', router);
+
+
+app.listen(process.env.port || 4444, () => {
+    console.log(`Server running at ${4444} !`);
 })
